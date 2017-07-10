@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title> LightningLord Productions </title>
-    <link rel="icon" href="https://github.com/Kartik-Nagpal/Kartik-Nagpal.github.io/blob/master/Resources/Pictures/Laughing%20Skull.gif?raw=true" />
+    <link rel="icon" href="./Resources/Laughing%20Skull.gif?raw=true"/>
 
     <!-- CSS Resources -->
-    <link type="text/css" rel="stylesheet" href="stylesheets.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous"></link>
     <link rel="stylesheet" href="https://bootswatch.com/darkly/bootstrap.min.css" crossorigin="anonymous"></link>
     <!-- End CSS Resources -->
 
     <!-- JS resources -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://bootswatch.com/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="./main.js"></script>
     <!-- end JS resources -->
   </head>
 
@@ -39,14 +40,21 @@
           id: "PlanetSim",
         },
         {
-          name: "ANN",
-          id: "ANN",
+          name: "Javascript ANN",
+          id: "Javascript ANN",
         }
       ];
 
       this.products = $scope.pages;
 
-      $scope.activeTab = $scope.pages[0].id;
+      var q = (window.location.href).split("#");
+      if(q.length > 1 && q[1] != "")
+      {
+        $scope.activeTab = q[1];
+      }
+      else {
+        $scope.activeTab = $scope.pages[0].id;
+      }
       $scope.changeTab = function(n) {
           var x = $scope.pages[n].id;
           $scope.activeTab = x;
@@ -77,7 +85,7 @@
               <li ng-class="{'active': pages[0].name == activeTab}" ng-click="changeTab(0)"><a href="#">Home<span class="sr-only">(current)</span></a></li>
               <li ng-class="{'active': pages[1].name == activeTab}" ng-click="changeTab(1)"><a href="#Bubbles">Bubbles</a></li>
               <li ng-class="{'active': pages[2].name == activeTab}" ng-click="changeTab(2)"><a href="#PlanetSim">PlanetSim</a></li>
-              <li ng-class="{'active': pages[3].name == activeTab}" ng-click="changeTab(3)"><a href="#ANN">ANN</a></li>
+              <li ng-class="{'active': pages[3].name == activeTab}" ng-click="changeTab(3)"><a href="#ANN">Javascript ANN</a></li>
             </ul>
 
             <form class="navbar-form navbar-right" role="search">
@@ -92,68 +100,72 @@
       </nav>
       <!-- Navbar End -->
 
+      <!-- Pages -->
       <div id="Home" ng-show="pages[0].id == activeTab">
         <div class=".container-fluid">
           <div class="row">
-            <div class="col-md-3"></div>
-            <div class="col-md-6">
-              <h1>This website is under construction!</h1>
-              <div id="sub">Check Back Soon for More!</div>
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+              <h1 style="text-align: center;">This website is under construction!</h1>
+              <div id="sub" style="text-align: center; color: #892f25;">Check Back Soon for More!</div>
             </div>
-            <div class="col-md-3"></div>
+            <div class="col-md-1"></div>
           </div>
         </div>
       </div>
 
       <div id="Bubbles" ng-show="pages[1].id == activeTab">
-        <div class=".container-fluid">
+        <div class="container">
           <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-8">
+            <div class="col-lg-12">
               <div class="jumbotron">
                 <h1>Bouncing Bubbles Animation</h1>
                 <p>This is a graphical project [ADD MORE]</p>
                 <p><a class="btn btn-primary btn-lg" href="https://Kartik-Nagpal.github.io/Bubbles/#1">Default Setup</a></p>
               </div>
+
+              <div class="well">
+
+              </div>
             </div>
-            <div class="col-md-2"></div>
           </div>
         </div>
       </div>
 
       <div id="PlanetSim" ng-show="pages[2].id == activeTab">
-        <div class=".container-fluid">
+        <div class="container">
           <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-8">
+            <div class="col-lg-12">
               <div class="jumbotron">
                 <h1>Planetary Simulation Animation</h1>
-                <p>This is a graphical project [ADD MORE]</p>
-                <p><a class="btn btn-primary btn-lg" href="https://Kartik-Nagpal.github.io/PlanetSim/">Default Setup</a></p>
+                <p>One of my first Web Projects, which I've ported over. This project creates a simulation of the Solar System, using mostly CSS, even for the animations. DUE TO FORMATTING PROBLEMS, PLEASE ZOOM OUT TO 33%</p>
+                <p><a class="btn btn-primary btn-lg" href="https://Kartik-Nagpal.github.io/PlanetSim/">Launch Simulation</a></p>
               </div>
             </div>
-            <div class="col-md-2"></div>
+
+
           </div>
         </div>
       </div>
 
-      <div id="ANN" ng-show="pages[3].id == activeTab">
-        <div class=".container-fluid">
+      <div id="Javascript ANN" ng-show="pages[3].id == activeTab">
+        <div class="container">
           <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-8">
+            <div class="col-lg-12">
               <div class="jumbotron">
                 <h1>Artificial Neural Network</h1>
                 <p>This is a graphical project [ADD MORE]</p>
-                <p><a class="btn btn-primary btn-lg" href="https://Kartik-Nagpal.github.io/ANN/">Default Setup</a></p>
+                <p><a class="btn btn-primary btn-lg" href="https://Kartik-Nagpal.github.io/ANN/">Launch Experiment</a></p>
               </div>
             </div>
-            <div class="col-md-2"></div>
+
+
           </div>
         </div>
       </div>
+      <!-- End Pages -->
 
-    </div>
+    </div><!-- Fluid Container -->
 
 
 
