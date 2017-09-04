@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang= "en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,6 +42,18 @@
         {
           name: "Javascript ANN",
           id: "Javascript ANN",
+        },
+        {
+          name: "Charter",
+          id: "Charter",
+        },
+        {
+          name: "Comp Sci HL II Portfolio",
+          id: "Comp Sci HL II Portfolio",
+        },
+        {
+          name: "ChangeLog",
+          id: "ChangeLog",
         }
       ];
 
@@ -63,7 +75,6 @@
   </script>
 
 
-
   <body style="overflow-x: hidden" ng-app="Website">
     <div class=".container-fluid" ng-controller="cont">
 
@@ -83,9 +94,12 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
               <li ng-class="{'active': pages[0].name == activeTab}" ng-click="changeTab(0)"><a href="#">Home<span class="sr-only">(current)</span></a></li>
+              <li ng-class="{'active': pages[5].name == activeTab}" ng-click="changeTab(5)"><a href="#Comp Sci HL II Portfolio">Comp Sci HL II Portfolio</a></li>
               <li ng-class="{'active': pages[1].name == activeTab}" ng-click="changeTab(1)"><a href="#Bubbles">Bubbles</a></li>
               <li ng-class="{'active': pages[2].name == activeTab}" ng-click="changeTab(2)"><a href="#PlanetSim">PlanetSim</a></li>
               <li ng-class="{'active': pages[3].name == activeTab}" ng-click="changeTab(3)"><a href="#ANN">Javascript ANN</a></li>
+              <li ng-class="{'active': pages[4].name == activeTab}" ng-click="changeTab(4)"><a href="#Charter">Charter</a></li>
+
             </ul>
 
             <form class="navbar-form navbar-right" role="search">
@@ -108,6 +122,9 @@
             <div class="col-md-10">
               <h1 style="text-align: center;">This website is under construction!</h1>
               <div id="sub" style="text-align: center; color: #892f25;">Check Back Soon for More!</div>
+              <br>
+              <div id="sub" style="text-align: center;">Basic Information: </div>
+              <p><a class="btn btn-primary btn-lg" href="https://github.com/Kartik-Nagpal">Github Page</a></p>
             </div>
             <div class="col-md-1"></div>
           </div>
@@ -154,11 +171,66 @@
             <div class="col-lg-12">
               <div class="jumbotron">
                 <h1>Artificial Neural Network</h1>
-                <p>This is a graphical project [ADD MORE]</p>
+                <p>An artificial neural network trained off of the MNIST database.</p>
                 <p><a class="btn btn-primary btn-lg" href="https://Kartik-Nagpal.github.io/ANN/">Launch Experiment</a></p>
               </div>
             </div>
 
+          </div>
+        </div>
+      </div>
+
+      <div id="Charter" ng-show="pages[4].id == activeTab">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="jumbotron">
+                <h1>The Charter Project</h1>
+                <p>Short for "Chart Maker", the Charter project is CONTINUE</p>
+                <p><a class="btn btn-primary btn-lg" href="https://Kartik-Nagpal.github.io/Charter/">Launch Experiment</a></p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div id="Comp Sci HL II Portfolio" ng-show="pages[5].id == activeTab">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="jumbotron">
+                <div style="text-align: center">
+                  <h2 style="font-size: 400%">IB Computer Science HL II Portfolio</h2>
+                  <h3>2017-2018</h3>
+                </div><br>
+                <p>This year for Computer Science, I will be creating an esoterical programming language. I will be combining the basics of Compiler Design with Crytpography, so that the code will be encrypted from the point that the user submits it to the point that it is literally machine code.</p>
+                <p><a class="btn btn-primary btn-lg" ng-click="changeTab(6)">Change Log</a>
+                <a class="btn btn-primary btn-lg" href="https://docs.google.com/spreadsheets/d/1tNR00vQfxiKY3iNv_U0Yvcczv7P6014wuYXJuN8W8ZM/edit?usp=sharing">Work Log</a></p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div id="ChangeLog" ng-show="pages[6].id == activeTab">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="jumbotron">
+                <h1>ChangeLog</h1>
+                <p>This is a log of all changes made to my Portfolio over the course of IB Computer Science HL II</p>
+
+                <div class="well">
+                  <h2>8/30/2017</h2>
+                  <br>
+                  <div class="list">
+
+                  </div>
+                </div>
+              </div>
+            </div>
 
           </div>
         </div>
