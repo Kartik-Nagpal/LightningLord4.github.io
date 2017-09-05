@@ -72,6 +72,14 @@
           $scope.activeTab = x;
       };
     }]);
+
+    function LinkCreate() {
+      var link = "https://kartik-nagpal.github.io/Bubbles/#"
+      var num = $("#Shape").val();
+      var text = $("#message").val();
+      console.log(link + num + "!" + text);
+      //window.location.replace(link);
+   }
   </script>
 
 
@@ -99,7 +107,6 @@
               <li ng-class="{'active': pages[2].name == activeTab}" ng-click="changeTab(2)"><a href="#PlanetSim">PlanetSim</a></li>
               <li ng-class="{'active': pages[3].name == activeTab}" ng-click="changeTab(3)"><a href="#ANN">Javascript ANN</a></li>
               <li ng-class="{'active': pages[4].name == activeTab}" ng-click="changeTab(4)"><a href="#Charter">Charter</a></li>
-
             </ul>
 
             <form class="navbar-form navbar-right" role="search">
@@ -142,7 +149,36 @@
               </div>
 
               <div class="well">
-
+                <form class="form-horizontal">
+                  <fieldset>
+                    <legend>Custom Link Creator</legend>
+                    <div class="form-group">
+                      <label for="Shape" class="col-lg-2 control-label">Shape</label>
+                      <div class="col-lg-10">
+                        <select class="form-control" id="Shape">
+                         <option value="1">Choose One</option>
+                         <option value="1">Circle</option>
+                         <option value="2">Square</option>
+                         <option value="3">Triangle</option>
+                         <option value="4">Hexagon</option>
+                         <option value="5">Cross</option>
+                       </select>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="Text" class="col-lg-2 control-label">Text</label>
+                      <div class="col-lg-10">
+                        <input type="text" class="form-control" id="message" placeholder="Hello There">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                     <div class="col-lg-10 col-lg-offset-2">
+                       <button type="reset" class="btn btn-default">Cancel</button>
+                       <button type="button" class="btn btn-primary" onclick="LinkCreate()">Submit</button>
+                     </div>
+                   </div>
+                  </fieldset>
+                </form>
               </div>
             </div>
           </div>
@@ -205,8 +241,8 @@
                   <h3>2017-2018</h3>
                 </div><br>
                 <p>This year for Computer Science, I will be creating an esoterical programming language. I will be combining the basics of Compiler Design with Crytpography, so that the code will be encrypted from the point that the user submits it to the point that it is literally machine code.</p>
-                <p><a class="btn btn-primary btn-lg" ng-click="changeTab(6)">Change Log</a>
-                <a class="btn btn-primary btn-lg" href="https://docs.google.com/spreadsheets/d/1tNR00vQfxiKY3iNv_U0Yvcczv7P6014wuYXJuN8W8ZM/edit?usp=sharing">Work Log</a></p>
+                <p><a class="btn btn-primary btn-lg" ng-click="changeTab(6)" href="#ChangeLog">Change Log</a>
+                <a class="btn btn-primary btn-lg" href="https://docs.google.com/spreadsheets/d/1EGWw2MDHKVuoLT9Xx_EOyX3Gn92R5e1ZfSwzWpAHVyM/edit?usp=sharing">Work Log</a></p>
               </div>
             </div>
 
@@ -221,14 +257,35 @@
               <div class="jumbotron">
                 <h1>ChangeLog</h1>
                 <p>This is a log of all changes made to my Portfolio over the course of IB Computer Science HL II</p>
+                <p><h5>A slightly more detailed ChangeLog can be found <a href="https://github.com/Kartik-Nagpal/Kartik-Nagpal.github.io/commits/master">here</a>.</h5></p>
 
                 <div class="well">
-                  <h2>8/30/2017</h2>
-                  <br>
+                  <h4>8/30/2017</h4>
                   <div class="list">
-
+                    <ul>
+                      <li>Added Work Log link</li>
+                      <li>Merged the "experimental" branch with the "master" and thus:</li>
+                      <ul style="list-style-type:square">
+                        <li>Publish the "IB Computer Science HL II Portfolio" tab</li>
+                        <li>Add this Un-anchored ChangeLog page</li>
+                      </ul>
+                      <li>Added short expository</li>
+                    </ul>
                   </div>
                 </div>
+
+                <div class="well">
+                  <h4>9/4/2017</h4>
+                  <div class="list">
+                    <ul>
+                      <li>Updated Work Log link</li>
+                      <li>Tweaked "IB Computer Science HL II Portfolio" tab description</li>
+                      <li>Changed ChangeLog formatting</li>
+                    </ul>
+                  </div>
+                </div>
+
+
               </div>
             </div>
 
