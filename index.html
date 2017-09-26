@@ -85,7 +85,7 @@
   <body style="overflow-x: hidden" ng-app="Website">
     <div class=".container-fluid" ng-controller="cont">
 
-      <!-- Navbar Begins -->
+      <!-- Navbar -->
       <nav class="navbar navbar-default">
         <div class="container-fluid">
           <div class="navbar-header">
@@ -107,18 +107,11 @@
               <li ng-class="{'active': pages[3].name == activeTab}" ng-click="changeTab(3)"><a href="#Javascript ANN">Javascript ANN</a></li>
               <li ng-class="{'active': pages[4].name == activeTab}" ng-click="changeTab(4)"><a href="#Charter">Charter</a></li>
             </ul>
-
-            <form class="navbar-form navbar-right" role="search">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search">
-              </div>
-              <button type="submit" class="btn btn-default">Submit</button>
-            </form>
-
           </div>
         </div>
       </nav>
       <!-- Navbar End -->
+
 
       <!-- Pages -->
       <div id="Home" ng-show="pages[0].id == activeTab">
@@ -148,6 +141,7 @@
           </div>
         </div>
       </div>
+
 
       <div id="Bubbles" ng-show="pages[1].id == activeTab">
         <div class="container">
@@ -196,6 +190,7 @@
         </div>
       </div>
 
+
       <div id="PlanetSim" ng-show="pages[2].id == activeTab">
         <div class="container">
           <div class="row">
@@ -207,10 +202,10 @@
               </div>
             </div>
 
-
           </div>
         </div>
       </div>
+
 
       <div id="Javascript ANN" ng-show="pages[3].id == activeTab">
         <div class="container">
@@ -230,6 +225,7 @@
         </div>
       </div>
 
+
       <div id="Charter" ng-show="pages[4].id == activeTab">
         <div class="container">
           <div class="row">
@@ -245,6 +241,7 @@
         </div>
       </div>
 
+
       <div id="Comp Sci HL II Portfolio" ng-show="pages[5].id == activeTab">
         <div class="container">
           <div class="row">
@@ -255,14 +252,37 @@
                   <h3>2017-2018</h3>
                 </div><br>
                 <p>This year for Computer Science, I will be creating an esoteric programming language. I will be combining the basics of Compiler Design with Crytpography, so that the code will be encrypted from the point that the user submits it to the point that it is literally machine code.</p>
-                <p><a class="btn btn-primary btn-lg" ng-click="changeTab(6)" href="#ChangeLog">Change Log</a>
-                <a class="btn btn-primary btn-lg" href="https://docs.google.com/spreadsheets/d/1EGWw2MDHKVuoLT9Xx_EOyX3Gn92R5e1ZfSwzWpAHVyM/edit?usp=sharing">Work Log</a></p>
+                <p>
+                   <a class="btn btn-primary btn-lg" ng-click="changeTab(6)" href="#ChangeLog">Change Log</a>
+                   <a class="btn btn-primary btn-lg" href="https://docs.google.com/spreadsheets/d/1EGWw2MDHKVuoLT9Xx_EOyX3Gn92R5e1ZfSwzWpAHVyM/edit?usp=sharing">Work Log</a>
+                   <a class="btn btn-primary btn-lg" href="https://github.com/Kartik-Nagpal/CryptoSpeach">Github Repo</a>
+                </p>
               </div>
             </div>
-
           </div>
+          <div class="row">
+             <div class="col-md-10 col-md-offset-1">
+                <div class="panel panel-primary">
+                   <div class="panel-heading">
+                      <h3 class="panel-title">
+                        Google Drive Folder
+                        <p style="float: right"><a target="_blank" title="Open Drive Folder, CRYPTOSPEACH" href="https://docs.google.com/folderview?authuser=0&amp;id=0B0L7pmQC-dxDLU51Ry1sU1RibW8">Expand</a></p>
+                     </h3>
+                   </div>
+                   <div class="panel-body">
+                      <div style="overflow: hidden;">
+                        <div style="background-color: #FFFFFF">
+                           <iframe style="width:100%; padding:0; border:0; height: 500px" onload="this.setAttribute('data-iframe-loaded', true)" frameborder="0" aria-label="Drive Folder, CRYPTOSPEACH" src="https://drive.google.com/embeddedfolderview?authuser=0&amp;id=0B0L7pmQC-dxDLU51Ry1sU1RibW8#list"></iframe>
+                        </div>
+                      </div>
+                   </div>
+               </div>
+             </div>
+          </div>
+          <!-- End of Last Row -->
         </div>
       </div>
+
 
       <div id="ChangeLog" ng-show="pages[6].id == activeTab">
         <div class="container">
@@ -299,6 +319,22 @@
                   </div>
                 </div>
 
+                <div class="well">
+                  <h4>9/26/2017</h4>
+                  <div class="list">
+                    <ul>
+                      <li>Added a link to the Github Repo</li>
+                      <ul style="list-style-type:square">
+                        <li>Added more files and code to this section</li>
+                        <li>Made the Repository public so I could add it to this Portfolio</li>
+                      </ul>
+                      <li>Embeded the Google Drive folder for this Project</li>
+                      <li>Fixed up a series of formatting and spelling errors</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Add more to the ChangeLog Here -->
 
               </div>
             </div>
