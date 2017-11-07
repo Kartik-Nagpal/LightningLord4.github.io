@@ -39,8 +39,8 @@
           id: "PlanetSim",
         },
         {
-          name: "Javascript ANN",
-          id: "Javascript ANN",
+          name: "CSHL1",
+          id: "CSHL1",
         },
         {
           name: "Charter",
@@ -102,9 +102,9 @@
             <ul class="nav navbar-nav">
               <li ng-class="{'active': pages[0].name == activeTab}" ng-click="changeTab(0)"><a href="#">Home<span class="sr-only">(current)</span></a></li>
               <li ng-class="{'active': pages[5].name == activeTab}" ng-click="changeTab(5)"><a href="#CompSciHL">Comp Sci HL II Portfolio</a></li>
-              <li ng-class="{'active': pages[1].name == activeTab}" ng-click="changeTab(1)"><a href="#Bubbles">Bubbles</a></li>
+              <li ng-class="{'active': pages[3].name == activeTab}" ng-click="changeTab(3)"><a href="#CSHL1">Comp Sci HL I</a></li>
               <li ng-class="{'active': pages[2].name == activeTab}" ng-click="changeTab(2)"><a href="#PlanetSim">PlanetSim</a></li>
-              <li ng-class="{'active': pages[3].name == activeTab}" ng-click="changeTab(3)"><a href="#Javascript ANN">Javascript ANN</a></li>
+              <li ng-class="{'active': pages[1].name == activeTab}" ng-click="changeTab(1)"><a href="#Bubbles">Bubbles</a></li>
               <li ng-class="{'active': pages[4].name == activeTab}" ng-click="changeTab(4)"><a href="#Charter">Charter</a></li>
             </ul>
           </div>
@@ -207,21 +207,45 @@
       </div>
 
 
-      <div id="Javascript ANN" ng-show="pages[3].id == activeTab">
+      <div id="CSHL1" ng-show="pages[3].id == activeTab">
         <div class="container">
           <div class="row">
             <div class="col-lg-12">
               <div class="jumbotron">
-                <h1>Artificial Neural Network</h1>
+                <div style="text-align: center">
+                   <h2 style="font-size: 400%">IB Computer Science HL I</h2>
+                   <h3>2016-2017</h3>
+                </div><br>
+                <br>
                 <p>Here I’ve created an artificial neural network with the shape [784, 200, 10] and trained off the MNIST database for handwritten digits. By adapting this project to this website, I am able to allow anyone to draw a digit, which my Neural Network can try to decode and better understand.</p>
                 <p>
-                   <a class="btn btn-primary btn-lg" href="https://Kartik-Nagpal.github.io/ANN/">Launch Experiment</a>
+                   <a class="btn btn-primary btn-lg" href="https://Kartik-Nagpal.github.io/Javascript-ANN/">Launch Experiment</a>
                    <a class="btn btn-primary btn-lg" href="https://docs.google.com/a/roundrockisd.org/document/d/1Bd5jgwZejg9uWw9AGrAIcfW2qIz8j5o97Ko3UnRImHM/edit?usp=sharing">Essay on Creation and Research</a>
+                   <a class="btn btn-primary btn-lg" href="https://github.com/Kartik-Nagpal/Javascript-ANN">Github Repo</a>
                 </p>
               </div>
             </div>
-
           </div>
+          <div class="row">
+             <div class="col-md-10 col-md-offset-1">
+                <div class="panel panel-primary">
+                   <div class="panel-heading">
+                      <h3 class="panel-title">
+                        Google Drive Folder
+                        <p style="float: right"><a target="_blank" title="Open Drive Folder, NEURAL NETWORKS" href="https://docs.google.com/folderview?authuser=0&id=0B0L7pmQC-dxDLTlqUkdRV3JUd0E">Expand</a></p>
+                     </h3>
+                   </div>
+                   <div class="panel-body">
+                      <div style="overflow: hidden;">
+                        <div style="background-color: #FFFFFF">
+                           <iframe style="width:100%; padding:0; border:0; height: 500px" onload="this.setAttribute('data-iframe-loaded', true)" frameborder="0" aria-label="Drive Folder, NEURAL NETWORKS" src="https://drive.google.com/embeddedfolderview?authuser=0&id=0B0L7pmQC-dxDLTlqUkdRV3JUd0E#list"></iframe>
+                        </div>
+                      </div>
+                   </div>
+               </div>
+             </div>
+          </div>
+          <!-- End of Last Row -->
         </div>
       </div>
 
@@ -232,7 +256,7 @@
             <div class="col-lg-12">
               <div class="jumbotron">
                 <h1>The Charter Project</h1>
-                <p>Short for "Chart Maker", the Charter project is CONTINUE</p>
+                <p>Short for "Chart Maker", the Charter project is meant to be a quick and painless way to create many different types of plots and charts right on you browser. It is currently still in creation and doesn't have many working options. As of now, only the Cloreopleth map works.</p>
                 <p><a class="btn btn-primary btn-lg" href="https://Kartik-Nagpal.github.io/Charter/">Launch Experiment</a></p>
               </div>
             </div>
@@ -343,7 +367,6 @@
                     </ul>
                   </div>
                 </div>
-
                 <!-- Add more to the ChangeLog Here -->
 
               </div>
