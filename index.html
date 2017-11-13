@@ -10,12 +10,12 @@
 
     <!-- CSS Resources -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous"></link>
-    <link rel="stylesheet" href="https://bootswatch.com/darkly/bootstrap.min.css" crossorigin="anonymous"></link>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/darkly/bootstrap.min.css" crossorigin="anonymous"></link>
     <!-- End CSS Resources -->
 
     <!-- JS resources -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://bootswatch.com/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <!-- end JS resources -->
   </head>
@@ -112,6 +112,36 @@
       </nav>
       <!-- Navbar End -->
 
+      <!-- Navbar 2 -->                            <!--
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+         <a class="navbar-brand" href="#">Navbar</a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation" style="">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+
+         <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav mr-auto">
+               <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#">Features</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#">Pricing</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+               </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+               <input class="form-control mr-sm-2" type="text" placeholder="Search">
+               <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+         </div>
+      </nav>
+                                                -->
+      <!-- End Navbar 2 -->
 
       <!-- Pages -->
       <div id="Home" ng-show="pages[0].id == activeTab">
@@ -143,6 +173,7 @@
       </div>
 
 
+      <!-- Bubbles Page -->
       <div id="Bubbles" ng-show="pages[1].id == activeTab">
         <div class="container">
           <div class="row">
@@ -191,6 +222,7 @@
       </div>
 
 
+      <!-- Planetary Simulation Page -->
       <div id="PlanetSim" ng-show="pages[2].id == activeTab">
         <div class="container">
           <div class="row">
@@ -207,6 +239,7 @@
       </div>
 
 
+      <!-- Computer Science HL I Page -->
       <div id="CSHL1" ng-show="pages[3].id == activeTab">
         <div class="container">
           <div class="row">
@@ -250,6 +283,7 @@
       </div>
 
 
+      <!-- Chart-Maker Page -->
       <div id="Charter" ng-show="pages[4].id == activeTab">
         <div class="container">
           <div class="row">
@@ -266,6 +300,7 @@
       </div>
 
 
+      <!-- CS HL II -->
       <div id="Comp Sci HL II Portfolio" ng-show="pages[5].id == activeTab">
         <div class="container">
           <div class="row">
@@ -308,6 +343,7 @@
       </div>
 
 
+      <!-- Changelog Page -->
       <div id="ChangeLog" ng-show="pages[6].id == activeTab">
         <div class="container">
           <div class="row">
@@ -387,12 +423,9 @@
           </div>
         </div>
       </div>
+      <!-- End Changelog -->
       <!-- End Pages -->
 
-    </div><!-- Fluid Container -->
-
-      <!--Bouncing Bubbles Animation        https://Kartik-Nagpal.github.io/Bubbles/-->
-  	   <!--Planetary Simulation Animation     https://Kartik-Nagpal.github.io/PlanetSim/-->
-      <!--Artificial Neural Network          https://Kartik-Nagpal.github.io/ANN/-->
+   </div><!-- End Fluid Container -->
   </body>
 </html>
